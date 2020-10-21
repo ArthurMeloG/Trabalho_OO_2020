@@ -2,14 +2,14 @@ public class Categoria {
 
     //Atributos
     String descricao;
-    SubCategoria cadastraSubCategoria[];
+    SubCategoria subcategorias[];
 
     int k;
 
     //Métodos
-    public void cadastraSubCategoria(SubCategoria s){
+    public void cadastrarSubCategoria(SubCategoria s){
 
-        cadastraSubCategoria[k] = s;
+        subcategorias[k] = s;
         k++;
     }
 }
