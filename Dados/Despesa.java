@@ -1,15 +1,17 @@
 public class Despesa {
     
     //Atributos
-    String descricao;
+    String  descricao,
+            date;
     Double valor;
     Categoria categoria[];
-    int j ;
+
+    int j;
+
+    //Métodos
    public void cadastraCategoria(Categoria c){
 
         categoria[j] = c;
         j++;
-
-
     }
 }
