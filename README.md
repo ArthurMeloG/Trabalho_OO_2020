@@ -2,12 +2,12 @@
 Grupo de Orientação de objetos
 
 # Integrantes
--Arthur de Melo Garcia        190024950
+-Arthur de Melo Garcia            190024950
 
--Arthur Heleno do Couto       180116746
+-Arthur Heleno do Couto           180116746
 
--Eliás Yousef                 190024950
+-Eliás Yousef                     190027088
 
--Rafael Fernandes Amancio     190036940
-
--Yuri Alves Bacarias          180078640
+-Rafael Fernandes Amancio (Polkh) 190036940
+ 
+-Yuri Alves Bacarias              180078640
