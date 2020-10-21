@@ -7,7 +7,7 @@ public class Republica{
     int i = 0;
     
     //Métodos
-    public void cadastrarPessoas(Pessoa p){
+    public void cadastrarPessoa(Pessoa p){
         pessoas[i] = p;
         i++;
     }
