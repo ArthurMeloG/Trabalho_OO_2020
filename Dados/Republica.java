@@ -1,4 +1,4 @@
-class Republica{
+public class Republica{
 
     Pessoa pessoas[];
     Despesa despesas[];
