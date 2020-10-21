@@ -1,8 +1,8 @@
 public class Pessoa {
     
     //Atributos
-    String nome;
-    String email;
+    String  nome,
+            email;
     Double totalRendimentos;
 
     Pessoa(){
