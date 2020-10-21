@@ -1,10 +1,9 @@
 public class Despesa {
     
     //Atributos
-    String  descricao,
-            date;
-    double valor;
-    Categoria categorias[];
+    public String descricao, date;
+    private double valor;
+    private Categoria categorias[];
 
     int j;
 

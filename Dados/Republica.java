@@ -1,8 +1,8 @@
 public class Republica{
 
     //Atributos
-    Pessoa pessoas[];
-    Despesa despesas[];
+    private Pessoa pessoas[];
+    private Despesa despesas[];
 
     int i = 0;
     

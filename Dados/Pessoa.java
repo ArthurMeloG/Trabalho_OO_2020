@@ -1,13 +1,7 @@
 public class Pessoa {
     
     //Atributos
-    String  nome,
-            email;
-    double totalRendimentos;
+    private String  nome, email;
+    private double totalRendimentos;
 	
-	//Métodos
-
-    Pessoa(){
-
-    }
 }

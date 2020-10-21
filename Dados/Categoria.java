@@ -1,8 +1,8 @@
 public class Categoria {
 
     //Atributos
-    String descricao;
-    SubCategoria subcategorias[];
+    public String descricao;
+    private SubCategoria subcategorias[];
 
     int k;
 

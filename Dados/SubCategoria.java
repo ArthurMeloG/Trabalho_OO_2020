@@ -1,5 +1,5 @@
 public class SubCategoria {
 
     //Atributos
-    String descricao;
+    public String descricao;
 }
