@@ -55,7 +55,7 @@ public class Exception {
 		do {
 
 			try {
-				String strREND = JOptionPane.showInputDialog("Digite o seu rendimento");
+				String strREND = (String) JOptionPane.showInputDialog(null, "Digite o seu rendimento", "CADASTRO", 0 , Icons.icones(4), null, "");
 				float rend = Float.parseFloat(strREND);				
 				al.setRend(rend);
 				rendLoop = 1;

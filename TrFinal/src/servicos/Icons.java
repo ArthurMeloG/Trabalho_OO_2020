@@ -18,6 +18,10 @@ public class Icons {
 		case 3:
 			icons = new ImageIcon("icons/mail.jpg");
 			break;
+			
+		case 4:
+			icons = new ImageIcon("icons/rendimento.jpg");
+			break;
 
 		default:
 			break;
