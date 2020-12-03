@@ -18,7 +18,7 @@ public class Exception {
 		do {
 			try {
 				
-				String nome = JOptionPane.showInputDialog("Digite o seu nome");
+				String nome = (String) JOptionPane.showInputDialog(null,"Digite o seu nome", "CADASTRO", 0 , Icons.icones(2), null, "");
 				if (nome.isEmpty()) {
 					throw new RuntimeException();
 				} else
@@ -37,7 +37,7 @@ public class Exception {
 		do {
 			try {
 			
-				String email = JOptionPane.showInputDialog("Digite o seu email");
+				String email = (String) JOptionPane.showInputDialog(null,"Digite o seu email","CADASTRO", 0 , Icons.icones(3), null,"");
 				if (email.isEmpty()) {
 					throw new RuntimeException();
 				} else
