@@ -25,7 +25,7 @@ public class Exception {
 					nomeLoop = 1;
 					al.setNome(nome);
 			} catch (RuntimeException exc) {
-				JOptionPane.showMessageDialog(null, "(DadosPessoaisIncompletosException)");
+				JOptionPane.showMessageDialog(null, "(DadosPessoaisIncompletosException)", "EXCEPTION", JOptionPane.ERROR_MESSAGE);
 				JOptionPane.showMessageDialog(null, "Recadastrando...");
 			}
 
@@ -44,7 +44,7 @@ public class Exception {
 					emailLoop = 1;
 					al.setEmail(email);
 			} catch (RuntimeException exc) {
-				JOptionPane.showMessageDialog(null, "(DadosPessoaisIncompletosException)");
+				JOptionPane.showMessageDialog(null, "(DadosPessoaisIncompletosException)","EXCEPTION", JOptionPane.ERROR_MESSAGE);
 				JOptionPane.showMessageDialog(null, "Recadastrando...");
 			}
 
@@ -62,7 +62,7 @@ public class Exception {
 
 			} catch (NumberFormatException ex) {
 
-				JOptionPane.showMessageDialog(null, "(RendimentoInvalidoException)");
+				JOptionPane.showMessageDialog(null, "(RendimentoInvalidoException)", "EXCEPTION",JOptionPane.ERROR_MESSAGE);
 				JOptionPane.showMessageDialog(null, "Recadastrando...");				
 				rendLoop = 0;
 			}

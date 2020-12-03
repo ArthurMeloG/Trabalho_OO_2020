@@ -1,16 +1,28 @@
 package servicos;
 
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import cadastro.CadastroAluno;
 
 public class Menu {
 	public static int printMenu() {
 
+		ImageIcon icons = new ImageIcon("icons/unb.png");
+		
 		String STRopc = null;
-		STRopc = JOptionPane.showInputDialog("Digite 1 para cadastrar um aluno \n"
-											+"Digite 2 para printar os Alunos salvos \n"
-											+"Digite 9 para sair do programa");
+		STRopc = (String) JOptionPane.showInputDialog(null, "Digite 1 para cadastrar um aluno \n"
+				+"Digite 2 para printar os Alunos salvos \n"
+				+"Digite 3 para ... \n"
+				+"Digite 4 para ... \n"
+				+"Digite 5 para ... \n"
+				+"Digite 6 para ... \n"
+				+"Digite 7 para ... \n"
+				+"Digite 9 para sair do programa", "menu" , 0, icons , null, "");
+		
+
 		int opc = Integer.parseInt(STRopc);
+		
+		
 
 		return opc;
 	}
