@@ -47,7 +47,7 @@ public class Menu {
 					else
 						JOptionPane.showMessageDialog(null, "ERRO");
 
-					STRtemp = JOptionPane.showInputDialog("Deseja cadastrar outro usuario? 1 = sim 2 = não");
+					STRtemp = JOptionPane.showInputDialog("Deseja cadastrar outro usuario?\n 1 = sim \n 2 = não");
 					temp = Integer.parseInt(STRtemp);
 					
 				} while (temp != 2);
