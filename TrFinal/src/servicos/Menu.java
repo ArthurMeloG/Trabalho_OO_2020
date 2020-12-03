@@ -39,7 +39,7 @@ public class Menu {
 			}
 		} while (temp  != 2);
 		
-		ca.printTest();
+		ca.printLista();
 	}
 
 }

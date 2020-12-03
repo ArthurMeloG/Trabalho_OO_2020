@@ -23,7 +23,7 @@ public class CadastroAluno {
 		return true;
 	}
 	
-	public void printTest(){
+	public void printLista(){
 		
 		for (int i = 0; i < alunos.size(); i++) {
 

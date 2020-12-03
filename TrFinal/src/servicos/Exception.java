@@ -8,44 +8,66 @@ public class Exception {
 	public static Aluno alunoException() {
 		Aluno al = new Aluno(null, null, null);
 		
-//		boolean loop2 = true;
 
-		// NAME EXCEPTION
+		int nomeLoop = 0;
+		int emailLoop = 0;
+		int rendLoop = 0;	
+		// NOME EXCEPTION
 
-		//boolean loop1 = true;
-		//do {
+
+		do {
 			try {
 				
 				String nome = JOptionPane.showInputDialog("Digite o seu nome");
-				String email = JOptionPane.showInputDialog("Digite o seu email");
-				if (nome.isEmpty() || email.isEmpty()) {
+				if (nome.isEmpty()) {
 					throw new RuntimeException();
 				} else
-//					loop1 = false;
-					al.setEmail(email);
+					nomeLoop = 1;
 					al.setNome(nome);
 			} catch (RuntimeException exc) {
 				JOptionPane.showMessageDialog(null, "(DadosPessoaisIncompletosException)");
+				JOptionPane.showMessageDialog(null, "Recadastrando...");
 			}
 
-//		} while (loop1 = !true);
+		} while (nomeLoop != 1);
+		
+		
+		//EMAIL EXCEPTION
+		
+		do {
+			try {
+			
+				String email = JOptionPane.showInputDialog("Digite o seu email");
+				if (email.isEmpty()) {
+					throw new RuntimeException();
+				} else
+					emailLoop = 1;
+					al.setEmail(email);
+			} catch (RuntimeException exc) {
+				JOptionPane.showMessageDialog(null, "(DadosPessoaisIncompletosException)");
+				JOptionPane.showMessageDialog(null, "Recadastrando...");
+			}
+
+		} while (emailLoop != 1);
 		
 
 		// RENDIMENTO EXCEPTION
-//		do {
+		do {
 
 			try {
 				String strREND = JOptionPane.showInputDialog("Digite o seu rendimento");
-				float rend = Float.parseFloat(strREND);
-//				loop2 = false;
+				float rend = Float.parseFloat(strREND);				
 				al.setRend(rend);
+				rendLoop = 1;
 
 			} catch (NumberFormatException ex) {
 
 				JOptionPane.showMessageDialog(null, "(RendimentoInvalidoException)");
+				JOptionPane.showMessageDialog(null, "Recadastrando...");				
+				rendLoop = 0;
 			}
 
-//		} while (loop2 = true);
+		} while (rendLoop != 1);
 		
 			
 
