@@ -1,6 +1,8 @@
 package principal;
 
 
+
+
 import servicos.Menu;
 
 public class Principal {
@@ -9,6 +11,8 @@ public class Principal {
 		int op;
 		op = Menu.printMenu();
 		Menu.menu(op);
+		
+		
 
 
 	}

@@ -27,7 +27,10 @@ public class CadastroAluno {
 		
 		for (int i = 0; i < alunos.size(); i++) {
 
-			JOptionPane.showMessageDialog(null, alunos.get(i).getEmail());
+			JOptionPane.showMessageDialog(null,"Alunos Cadastrado\n" +
+											"email : " + alunos.get(i).getEmail() + "\n" +
+											"nome : " + alunos.get(i).getNome() + "\n" +
+											"Rendimento : " + alunos.get(i).getRend());
 
 		}
 	}
