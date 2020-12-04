@@ -5,7 +5,6 @@ public class Aluno {
 	private String email;
 	private Float rend;
 	
-	
 	// Construtor
 	
 	public Aluno(String nome, String email , Float rend) {

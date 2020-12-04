@@ -31,10 +31,6 @@ public class CadastroAluno {
 											"email : " + alunos.get(i).getEmail() + "\n" +
 											"nome : " + alunos.get(i).getNome() + "\n" +
 											"Rendimento : " + alunos.get(i).getRend());
-			
-		
-			
-		
 
 		}
 	}

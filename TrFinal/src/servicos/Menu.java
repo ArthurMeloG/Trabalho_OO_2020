@@ -6,7 +6,6 @@ import servicos.Icons;
 
 public class Menu {
 	public static int printMenu() {
-
 	
 		String STRopc = null;
 		STRopc = (String) JOptionPane.showInputDialog(null, "Digite 1 para cadastrar um aluno \n"
@@ -21,8 +20,6 @@ public class Menu {
 
 		int opc = Integer.parseInt(STRopc);
 		
-		
-
 		return opc;
 	}
 
@@ -34,7 +31,6 @@ public class Menu {
 
 		int temp = 0;
 		int menu = 0;
-		
 		
 		do {
 			int i = printMenu();// UM PRINT DE MENU DENTRO DO LOOP PARA FICAR RODANDO
@@ -62,7 +58,6 @@ public class Menu {
 				ca.printLista(); //PRINTA OS OBJETOS NO ARRAY
 				break;
 				
-				
 			case 9:
 				menu = 9; // FECHA O ULTIMO LOOP
 
@@ -71,7 +66,6 @@ public class Menu {
 			}
 		} while (menu != 9); //LOOP DO MENU
 
-		
 	}
 
 }

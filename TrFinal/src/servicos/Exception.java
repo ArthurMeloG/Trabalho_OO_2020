@@ -7,7 +7,6 @@ import dados.Aluno;
 public class Exception {
 	public static Aluno alunoException() {
 		Aluno al = new Aluno(null, null, null);
-		
 
 		int nomeLoop = 0;
 		int emailLoop = 0;
@@ -15,12 +14,10 @@ public class Exception {
 		
 		// NOME EXCEPTION
 
-
 		do {
 			try {
 				
 				String nome = (String) JOptionPane.showInputDialog(null,"Digite o seu nome", "CADASTRO", 0 , Icons.icones(2), null, "");
-				
 				
 				if (nome.isEmpty()) {  // TESTA O EXCPETION VAZIO
 					throw new RuntimeException();
@@ -33,7 +30,6 @@ public class Exception {
 			}
 
 		} while (nomeLoop != 1); //LOOP EM CASO DE CADASTRO ERRADO
-		
 		
 		//EMAIL EXCEPTION
 		
@@ -53,7 +49,6 @@ public class Exception {
 
 		} while (emailLoop != 1);  // LOOP EM CASO DE CADASTRO ERRADO
 		
-
 		// RENDIMENTO EXCEPTION
 		do {
 
@@ -75,7 +70,6 @@ public class Exception {
 			
 
 		return al; // RETORNA O OBJETO 'al' Completamente preenchido
-
 	}
 
 }
