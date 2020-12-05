@@ -4,8 +4,8 @@ public class SubCategoria {
 
 	private String subDescricao;
 	
-	public void setSubDescricao(SubCategoria subCategoria) {
-		this.subDescricao = subCategoria;
+	public void setSubDescricao(String recebeSubCategoria) {
+		this.subDescricao = recebeSubCategoria;
 	}
 	
 	public String getSubDescricao() {
