@@ -6,6 +6,9 @@ public class Categoria {
 	private String RecebeSubCategoria;
 	private SubCategoria subCategoria = new SubCategoria();
 	
+	//Construtor
+	public Categoria() {}
+	
 	//Get e Set
 	public String getDescricao() {
 		return CatDescricao;
@@ -15,12 +18,20 @@ public class Categoria {
 		this.CatDescricao = Catdescricao;
 	}
 	
-	public void setRecebeSubCategoria() {
-		this.RecebeSubCategoria = subCategoria.setSubDescricao(subCategoria);
-	}
-	
 	public SubCategoria getSubCategoria() {
 		return subCategoria;
+	}
+	
+	public void setSubCategoria(SubCategoria subCategoria) {
+		this.subCategoria = subCategoria.setSubDescricao(RecebeSubCategoria);;
+	}
+	
+	public String getRecebeSubCategoria() {
+		return RecebeSubCategoria;
+	}
+	
+	public void setRecebeSubCategoria(String recebeSubCategoria) {
+		RecebeSubCategoria = recebeSubCategoria;
 	}
 	
 }
