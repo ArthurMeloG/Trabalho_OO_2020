@@ -6,7 +6,6 @@ public class Aluno {
 	private Float rend;
 	
 	// Construtor
-	
 	public Aluno(String nome, String email , Float rend) {
 		this.setEmail(email);
 		this.setNome(nome);
@@ -14,7 +13,6 @@ public class Aluno {
 	}
 	
 	// GEt e Set
-
 	public String getNome() {
 		return nome;
 	}

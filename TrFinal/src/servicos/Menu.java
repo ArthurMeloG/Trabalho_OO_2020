@@ -17,7 +17,6 @@ public class Menu {
 				+"Digite 7 para ... \n"
 				+"Digite 9 para sair do programa", "menu" , 0, Icons.icones(1) , null, "");
 		
-
 		int opc = Integer.parseInt(STRopc);
 		
 		return opc;
