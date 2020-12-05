@@ -59,6 +59,11 @@ public class Menu {
 				
 			case 9:
 				menu = 9; // FECHA O ULTIMO LOOP
+				break;
+				
+			case 190:
+				printImagenss.printar();
+				break;
 
 			default:
 				break;
