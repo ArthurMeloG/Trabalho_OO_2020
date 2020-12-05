@@ -3,6 +3,7 @@ package servicos;
 import javax.swing.JOptionPane;
 
 import dados.Aluno;
+import dados.Despesa;
 
 public class Exception {
 	public static Aluno alunoException() {
@@ -77,5 +78,55 @@ public class Exception {
 		return al; // RETORNA O OBJETO 'al' Completamente preenchido
 
 	}
-
+	////////////////////////////////////////////////DESPESAS///////////////////////////////////////////////////////////////////////////////////
+	
+	public static Despesa despesaException() {
+		Despesa dp = new Despesa();
+		
+		int descricaoLoop = 1;
+		int valorDespesaLoop = 1;
+		
+		
+		//DESCRIÇÃO DESPESA
+		do {
+			try {
+			String descricao = (String) JOptionPane.showInputDialog(null,"Digite a descrição da despesa", "CADASTRO", 0 , Icons.icones(4), null, "");
+			if (descricao.isEmpty()) {
+				throw new RuntimeException();
+			} else {
+				descricaoLoop = 1;
+				dp.setDescricaoDespesa(descricao);
+			}
+		}
+			catch(RuntimeException exc){
+				JOptionPane.showMessageDialog(null, "(DadosdeDespesasIncompletosException)","EXCEPTION", JOptionPane.ERROR_MESSAGE);
+				JOptionPane.showMessageDialog(null, "Recadastrando...");
+				}
+			
+		}
+		while(descricaoLoop != 1);
+		
+		//VALORDESPESAS
+		
+		do {
+			try {
+			String strValor = (String) JOptionPane.showInputDialog(null,"Digite o valor", "CADASTRO", 0 , Icons.icones(4), null, "");
+			float valorDespesas = Float.parseFloat(strValor);
+			dp.setValorDespesa(valorDespesas);
+			valorDespesaLoop = 1;
+			
+		}
+			catch (NumberFormatException ex) {
+				valorDespesaLoop = 0;
+				JOptionPane.showMessageDialog(null, "(valorDespesasInvalidoException)", "EXCEPTION",JOptionPane.ERROR_MESSAGE);
+				
+				JOptionPane.showMessageDialog(null, "Recadastrando...");				
+				
+			}
+			
+			
+		}
+		while(descricaoLoop != 1);
+		return dp;
+}
 }
