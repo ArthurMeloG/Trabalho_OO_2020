@@ -3,6 +3,7 @@ package servicos;
 import javax.swing.JOptionPane;
 
 import dados.Aluno;
+import dados.Categoria;
 
 public class Exception {
 	public static Aluno alunoException() {
@@ -70,6 +71,23 @@ public class Exception {
 			
 
 		return al; // RETORNA O OBJETO 'al' Completamente preenchido
+	}
+	
+	public static Categoria categoriaExcepcion() {
+		
+		int categoriaLoop = 0;
+		
+		do {
+			
+			try {
+				
+			}catch(Exception e) {
+				
+			}
+			
+		}while (categoriaLoop != 1);
+		
+		
 	}
 
 }
