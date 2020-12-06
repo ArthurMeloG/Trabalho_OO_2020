@@ -10,7 +10,7 @@ public class printImagenss {
 				for (int j = 1; j < 10; j++) {
 					EasterEgg.printImagem(j);
 					new Thread();
-					Thread.sleep(75);	
+					Thread.sleep(60);	
 					
 				}
 
