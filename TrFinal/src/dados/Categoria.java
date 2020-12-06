@@ -1,10 +1,17 @@
 package dados;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.swing.JOptionPane;
+
+import servicos.Exception;
 
 public class Categoria {
 	
 	private String CatDescricao;
-	private String RecebeSubCategoria;
-	private SubCategoria subCategoria = new SubCategoria();
+	List<Despesas> Despesas = new ArrayList<Despesas>();
+	
+
 	
 	//Construtor
 	public Categoria() {}
@@ -18,20 +25,35 @@ public class Categoria {
 		this.CatDescricao = Catdescricao;
 	}
 	
-	public SubCategoria getSubCategoria() {
-		return subCategoria;
+	public List<Despesas> getListasDesp (){
+		return Despesas;
+	}
+	public void  setListas (List<Despesas> desps){
+		this.Despesas = desps; 
 	}
 	
-	public void setSubCategoria(SubCategoria subCategoria) {
-		this.subCategoria = subCategoria.setSubDescricao(RecebeSubCategoria);;
+	
+	
+	
+	public boolean cadastraDespesas() {
+		Despesas temp = new Despesas();
+		temp = Exception.despesasException();
+		Despesas.add(temp);
+		return true;
 	}
 	
-	public String getRecebeSubCategoria() {
-		return RecebeSubCategoria;
+	public void printLista(){
+		
+		for (int i = 0; i < Despesas.size(); i++) { // RODA O ARRAY PEGANDO OS OBJETO E PRINTANDO
+
+			JOptionPane.showMessageDialog(null,"Despesa Cadastrada\n" +
+											"valor : " + Despesas.get(i).getValorDespesa() + "\n" +
+											"descrição : " + Despesas.get(i).getDescricaoDespesa() + "\n" 
+											);
+
+		}
 	}
 	
-	public void setRecebeSubCategoria(String recebeSubCategoria) {
-		RecebeSubCategoria = recebeSubCategoria;
-	}
+
 	
 }
