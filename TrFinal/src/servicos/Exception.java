@@ -92,7 +92,7 @@ public class Exception {
 		do {
 			try {
 				String nomeCat = (String) JOptionPane.showInputDialog(null, "Digite a categoria a ser cadastrada", "CADASTRO", 0,
-					Icons.icones(3), null, "");
+					Icons.icones(5), null, "");
 				if(cc.verficarIgual(nomeCat) == true) {
 					throw new InputMismatchException();
 				}
@@ -133,7 +133,7 @@ public class Exception {
 		do {
 			try {
 				String descricao = (String) JOptionPane.showInputDialog(null, "Digite a descrição da despesa",
-						"CADASTRO", 0, Icons.icones(4), null, "");
+						"CADASTRO", 0, Icons.icones(6), null, "");
 				if (descricao.isEmpty()) {
 					throw new IllegalArgumentException();
 				} else {
@@ -153,7 +153,7 @@ public class Exception {
 		do {
 			try {
 				String strValor = (String) JOptionPane.showInputDialog(null, "Digite o valor", "CADASTRO", 0,
-						Icons.icones(4), null, "");
+						Icons.icones(6), null, "");
 				float valorDespesas = Float.parseFloat(strValor);
 				dp.setValorDespesa(valorDespesas);
 				valorDespesaLoop = 1;
