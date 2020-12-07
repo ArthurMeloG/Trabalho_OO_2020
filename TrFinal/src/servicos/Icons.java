@@ -22,11 +22,16 @@ public class Icons {
 		case 4:
 			icons = new ImageIcon("icons/rendimento.jpg");
 			break;
+		case 5:
+			icons = new ImageIcon("icons/categoria.png");
+			break;
+		case 6:
+			icons = new ImageIcon("icons/despesas.png");
+			break;
 
 		default:
 			break;
 		}
-	
 	
 	return icons;
 	}

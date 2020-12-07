@@ -1,47 +1,47 @@
 package servicos;
 
 import javax.swing.JOptionPane;
+
 import cadastro.CadastroAluno;
-import servicos.Icons;
+import cadastro.CadastroCategoria;
 
 public class Menu {
 	public static int printMenu() {
-
 	
 		String STRopc = null;
 		STRopc = (String) JOptionPane.showInputDialog(null, "Digite 1 para cadastrar um aluno \n"
 				+"Digite 2 para printar os Alunos salvos \n"
-				+"Digite 3 para ... \n"
-				+"Digite 4 para ... \n"
-				+"Digite 5 para ... \n"
-				+"Digite 6 para ... \n"
+				+"Digite 3 para cadastrar uma categoria \n"
+				+"Digite 4 para cadastra despesas \n"
+				+"Digite 5 para printar as categorias cadastradas \n"
+				+"Digite 6 para printar as despesas de uma categoria \n"
 				+"Digite 7 para ... \n"
 				+"Digite 9 para sair do programa", "menu" , 0, Icons.icones(1) , null, "");
 		
-
 		int opc = Integer.parseInt(STRopc);
 		
-		
-
 		return opc;
 	}
 
 	public static void menu() {
 		
 		CadastroAluno ca = new CadastroAluno();
-		
-		String STRtemp = null;
+		CadastroCategoria cc = new CadastroCategoria();
 
-		int temp = 0;
-		int menu = 0;
 		
+		String STRtemp,STRtemp2,STRtemp3 = null;
+
+		int temp1 = 0;
+		int temp2 = 0;
+		int temp3 = 0;
+		int menu = 0;
 		
 		do {
 			int i = printMenu();// UM PRINT DE MENU DENTRO DO LOOP PARA FICAR RODANDO
 			
 			switch (i) {
 			
-			case 1:
+			case 1: //CADASTRA ALUNO
 				
 				do {
 					JOptionPane.showMessageDialog(null, "Cadastrando Aluno");
@@ -53,25 +53,77 @@ public class Menu {
 						JOptionPane.showMessageDialog(null, "ERRO");
 
 					STRtemp = JOptionPane.showInputDialog("Deseja cadastrar outro usuario?\n 1 = sim \n 2 = não");
-					temp = Integer.parseInt(STRtemp);
+					temp1 = Integer.parseInt(STRtemp);
 					
-				} while (temp != 2); // LOOP DO CADASTRO ALUNO PARA CADASTRAR QUANTOS OBJETOS O USUARIO QUISER
+				} while (temp1 != 2); // LOOP DO CADASTRO ALUNO PARA CADASTRAR QUANTOS OBJETOS O USUARIO QUISER
 
 				break;
-			case 2:
+				
+			case 2: //PRINTA ALUNO
 				ca.printLista(); //PRINTA OS OBJETOS NO ARRAY
 				break;
 				
+			case 3: //CADASTRA CATEGORIA
+				do {
+					JOptionPane.showMessageDialog(null, "Cadastrando Categoria");
+
+					if (cc.cadastrarCategoria() == true) 
+						JOptionPane.showMessageDialog(null, "Categoria cadastrada");
+					else
+						JOptionPane.showMessageDialog(null, "ERRO");
+
+					STRtemp2 = JOptionPane.showInputDialog("Deseja cadastrar outra categoria?\n 1 = sim \n 2 = não");
+					temp2 = Integer.parseInt(STRtemp2);
+					
+				} while (temp2 != 2);
+				break;
+				
+				
+			case 4 : //CADASTRA DESPESA
+				
+				do {
+					JOptionPane.showMessageDialog(null, "Cadastrando Despesa");
+					String StrCat = JOptionPane.showInputDialog("Digite uma categoria ja existente");
+
+					if (cc.acharIgual(StrCat) == true) {
+						JOptionPane.showMessageDialog(null, "Despesa cadastrada com sucesso");
+						STRtemp3 = JOptionPane.showInputDialog("Deseja cadastrar outra despesa?\n 1 = sim \n 2 = não");
+						temp3 = Integer.parseInt(STRtemp3);
+					}
+				
+					else{
+						JOptionPane.showMessageDialog(null, "Categoria não encotrada");
+						i=3;
+						temp3=2;
+					}
+					
+					
+				} while (temp3 != 2);
+				break;
+				
+			case 5 : // printa lista de cate
+				cc.printListaCategoria();
+				break;
+				
+			case 6 : //print despesas
+				JOptionPane.showMessageDialog(null, "Printando despesas");
+				String despesas=JOptionPane.showInputDialog("Digite a categoria em que as despesas estão inseridas ");
+				cc.printDesp(despesas);
+				break;
 				
 			case 9:
 				menu = 9; // FECHA O ULTIMO LOOP
+				break;
+				
+			case 190:
+				printImagenss.printar();
+				break;
 
 			default:
 				break;
 			}
 		} while (menu != 9); //LOOP DO MENU
 
-		
 	}
 
 }
