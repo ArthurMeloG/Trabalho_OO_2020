@@ -5,14 +5,13 @@ import java.util.List;
 import javax.swing.JOptionPane;
 
 import dados.Categoria;
-import dados.Despesas;
 import servicos.Exception;
 
 
 public class CadastroCategoria {
 
 	//Criando array de Categorias
-	List<Categoria> categorias = new ArrayList<Categoria>();
+	static List<Categoria> categorias = new ArrayList<Categoria>();
 	
 	public boolean cadastrarCategoria() {
 		Categoria temp = new Categoria();
@@ -44,6 +43,19 @@ public class CadastroCategoria {
 		
 		return false;
 	}
+	
+	public boolean verficarIgual(String nome) {
+		for(int j = 0; j < categorias.size();j++) {
+			if(nome.matches(categorias.get(j).getDescricao())==true) {
+				return true;
+			}
+		}
+		
+		return false;
+	}
+	
+	
+	
 	
 	public void printDesp(String nome) {
 		for(int j = 0; j < categorias.size();j++) {

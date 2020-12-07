@@ -1,6 +1,5 @@
 package servicos;
 
-import javax.swing.JFrame;
 
 public class printImagenss {
 	public static void printar() {

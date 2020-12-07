@@ -1,8 +1,10 @@
 package servicos;
 
+import java.util.InputMismatchException;
+
 import javax.swing.JOptionPane;
 
-
+import cadastro.CadastroCategoria;
 import dados.Aluno;
 import dados.Categoria;
 import dados.Despesas;
@@ -14,7 +16,6 @@ public class Exception {
 		int nomeLoop = 0;
 		int emailLoop = 0;
 		int rendLoop = 0;
-		int cateLoop = 0;
 
 		// NOME EXCEPTION
 
@@ -25,11 +26,11 @@ public class Exception {
 						Icons.icones(2), null, "");
 
 				if (nome.isEmpty()) { // TESTA O EXCPETION VAZIO
-					throw new RuntimeException();
+					throw new IllegalArgumentException();
 				} else
 					nomeLoop = 1;
 				al.setNome(nome); // CADASTRA NOME AO OBJETO 'al'
-			} catch (RuntimeException exc) {
+			} catch (IllegalArgumentException exc) {
 				JOptionPane.showMessageDialog(null, "(DadosPessoaisIncompletosException)", "EXCEPTION",
 						JOptionPane.ERROR_MESSAGE);
 				JOptionPane.showMessageDialog(null, "Recadastrando...");
@@ -45,11 +46,11 @@ public class Exception {
 				String email = (String) JOptionPane.showInputDialog(null, "Digite o seu email", "CADASTRO", 0,
 						Icons.icones(3), null, "");
 				if (email.isEmpty()) { // TESTA O EXCPETION VAZIO
-					throw new RuntimeException(); // JOGA A EXCEÇÃO
+					throw new IllegalArgumentException(); // JOGA A EXCEÇÃO
 				} else
 					emailLoop = 1;
 				al.setEmail(email); // CADASTRA EMAIL AO OBJETO 'email'
-			} catch (RuntimeException exc) {
+			} catch (IllegalArgumentException exc) {
 				JOptionPane.showMessageDialog(null, "(DadosPessoaisIncompletosException)", "EXCEPTION",
 						JOptionPane.ERROR_MESSAGE);
 				JOptionPane.showMessageDialog(null, "Recadastrando...");
@@ -85,21 +86,33 @@ public class Exception {
 
 	public static Categoria categoriaException() {
 		Categoria ca = new Categoria();
+		CadastroCategoria cc = new CadastroCategoria();
+		
 		int Catloop = 2;
 		do {
 			try {
 				String nomeCat = (String) JOptionPane.showInputDialog(null, "Digite a categoria a ser cadastrada", "CADASTRO", 0,
 					Icons.icones(3), null, "");
+				if(cc.verficarIgual(nomeCat) == true) {
+					throw new InputMismatchException();
+				}
+				
 				if(nomeCat.isEmpty() == true) {
-					throw new RuntimeException();					
+					throw new IllegalArgumentException();					
 				}else {
 					Catloop = 1;
 					ca.setDescricao(nomeCat);
 				}
-			} catch (RuntimeException e) {
+			} catch (IllegalArgumentException e) {
+				
 				JOptionPane.showMessageDialog(null, "(CategoriaNaoInformadaException)", "EXCEPTION",
 						JOptionPane.ERROR_MESSAGE);
-				JOptionPane.showMessageDialog(null, "Recadastrando...");				
+				JOptionPane.showMessageDialog(null, "Recadastrando...");	
+				
+			} catch(InputMismatchException a) {
+				JOptionPane.showMessageDialog(null, "(CategoriaJaCadastradaException)", "EXCEPTION",
+						JOptionPane.ERROR_MESSAGE);
+				JOptionPane.showMessageDialog(null, "Recadastrando...");	
 			}
 						
 		} while (Catloop != 1);
@@ -122,12 +135,12 @@ public class Exception {
 				String descricao = (String) JOptionPane.showInputDialog(null, "Digite a descrição da despesa",
 						"CADASTRO", 0, Icons.icones(4), null, "");
 				if (descricao.isEmpty()) {
-					throw new RuntimeException();
+					throw new IllegalArgumentException();
 				} else {
 					descricaoLoop = 1;
 					dp.setDescricaoDespesa(descricao);
 				}
-			} catch (RuntimeException exc) {
+			} catch (IllegalArgumentException exc) {
 				JOptionPane.showMessageDialog(null, "(DescricaoNaoInformadoException)", "EXCEPTION",
 						JOptionPane.ERROR_MESSAGE);
 				JOptionPane.showMessageDialog(null, "Recadastrando...");
@@ -154,7 +167,7 @@ public class Exception {
 
 			}
 
-		} while (descricaoLoop != 1);
+		} while (valorDespesaLoop != 1);
 		return dp;
 	}
 
