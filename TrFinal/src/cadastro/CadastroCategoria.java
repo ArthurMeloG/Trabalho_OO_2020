@@ -68,9 +68,7 @@ public class CadastroCategoria {
 	public List<Categoria> getListas (){
 		return categorias;
 	}
-	public void  setListas (List<Categoria> categ){
-		this.categorias = categ; 
-	}
+	
 
 	
 	
