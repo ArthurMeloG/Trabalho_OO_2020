@@ -7,21 +7,17 @@ import javax.swing.JOptionPane;
 
 import dados.Aluno;
 import servicos.Exception;
-import servicos.SalvarArquivo;
 
 public class CadastroAluno {
 
 	// Criando Array de alunos
 	List<Aluno> alunos = new ArrayList<Aluno>();
-	
 
 	public boolean cadastrarAluno() {  // ADICIONA O OBJETO ALUNO AO ARRAYLIST
-		SalvarArquivo sa = new SalvarArquivo(); // CHAMA PARA GRAVAR ALUNO EM UM AQUIVO TXT
 		Aluno temp = new Aluno(null, null, null); //OBJETO TEMPORARIA PARAR RECEBER OBJETO
 		
 		temp = Exception.alunoException();//RETORNA UM OBJETO ALUNO PREENCHIDO E TRATADO DE EXÇÃO
-		
-		sa.gravarAluno(temp); // GRAVANDO NO TXT
+	
 		alunos.add(temp); // ADICIONA O OBJETO "TEMP" QUE JA ESTA PREENCHIDO POR CONTA DO 'alunoexcpetion'
 
 		return true;
@@ -37,12 +33,5 @@ public class CadastroAluno {
 											    "Rendimento : " + alunos.get(i).getRend());
 
 		}
-			
 	}
-	
-	public List<Aluno> getAlunos(){
-		return alunos;
-	}
-	
-	
 }
