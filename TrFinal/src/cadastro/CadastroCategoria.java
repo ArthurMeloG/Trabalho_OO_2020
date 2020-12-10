@@ -53,9 +53,7 @@ public class CadastroCategoria {
 		
 		return false;
 	}
-	
-	
-	
+
 	
 	public void printDesp(String nome) {
 		for(int j = 0; j < categorias.size();j++) {
