@@ -9,6 +9,7 @@ import calculo.RendaProporcional;
 
 public class Menu {
 	public static int printMenu() {
+		
 	
 		String STRopc = null;
 		STRopc = (String) JOptionPane.showInputDialog(null, "Digite 1 para cadastrar um aluno \n"
@@ -28,6 +29,7 @@ public class Menu {
 
 	public static void menu() {
 		
+		LendoArquivo la = new LendoArquivo();
 		CadastroAluno ca = new CadastroAluno();
 		CadastroCategoria cc = new CadastroCategoria();
 		RendaIgualitaria ri = new RendaIgualitaria();
@@ -38,6 +40,9 @@ public class Menu {
 		int temp2 = 0;
 		int temp3 = 0;
 		int menu = 0;
+		
+		
+		la.lerAlunos();
 		
 		do {
 			int i = printMenu();// UM PRINT DE MENU DENTRO DO LOOP PARA FICAR RODANDO
@@ -93,7 +98,7 @@ public class Menu {
 					}
 				
 					else{
-						JOptionPane.showMessageDialog(null, "Categoria não encotrada");
+						JOptionPane.showMessageDialog(null, "Categoria nï¿½o encotrada");
 						i=3;
 						temp3=1;
 					}
@@ -108,7 +113,7 @@ public class Menu {
 				
 			case 6 : //print despesas
 				JOptionPane.showMessageDialog(null, "Printando despesas");
-				String despesas=JOptionPane.showInputDialog("Digite a categoria em que as despesas estão inseridas ");
+				String despesas=JOptionPane.showInputDialog("Digite a categoria em que as despesas estï¿½o inseridas ");
 				cc.printDesp(despesas);
 				break;
 				
