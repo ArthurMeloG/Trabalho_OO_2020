@@ -49,6 +49,10 @@ public class CadastroAluno {
 		return quantAluno;
 	}
 	
+	public static void setQuantAluno(int num) {
+		quantAluno = num;
+	}
+	
 	
 	public List<Aluno> getAlunos(){
 		return alunos;

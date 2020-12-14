@@ -21,6 +21,7 @@ public class LendoArquivo {
 		BufferedReader entrada = null;
 		CadastroAluno ca = new CadastroAluno();
 		Scanner s = null;
+		int quant = 0;
 	
 		if(new File(nomeArquivoAluno).isFile()) {
 			op = JOptionPane.showConfirmDialog(null, "Arquivo txt de Aluno encontrado.\n Deseja utilizar os dados salvos no arquivo?");
@@ -41,11 +42,13 @@ public class LendoArquivo {
 						
 						Aluno a = new Aluno(nome, email, rend);
 						
+						quant = quant+1;
 						ca.getAlunos().add(a);
 					}
 				} catch (IOException e) {
 					e.printStackTrace();
 				}finally {
+					CadastroAluno.setQuantAluno(quant);
 					if(entrada != null)
 						try {
 							entrada.close();
