@@ -6,7 +6,7 @@ import javax.swing.JOptionPane;
 
 import dados.Categoria;
 import servicos.Exception;
-import servicos.SalvarArquivo;
+
 
 
 public class CadastroCategoria {

@@ -98,7 +98,7 @@ public class Menu {
 					}
 				
 					else{
-						JOptionPane.showMessageDialog(null, "Categoria n�o encotrada");
+						JOptionPane.showMessageDialog(null, "Categoria nao encotrada");
 						i=3;
 						temp3=1;
 					}

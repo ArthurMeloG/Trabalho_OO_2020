@@ -25,7 +25,7 @@ public void gravarAluno(Aluno temp) {
 			JOptionPane.showMessageDialog(null, "Arquivo encontrado");
 			
 		}else {
-			JOptionPane.showMessageDialog(null, "Arquivo não encontrado\n"
+			JOptionPane.showMessageDialog(null, "Arquivo nï¿½o encontrado\n"
 					+ "Criando um Arquivo novo");
 			
 			try {
@@ -66,7 +66,7 @@ public void gravarCategoria(Despesas temp, String CatDescricao) {
 			JOptionPane.showMessageDialog(null, "Arquivo encontrado");
 			
 		}else {
-			JOptionPane.showMessageDialog(null, "Arquivo não encontrado\n"
+			JOptionPane.showMessageDialog(null, "Arquivo nao encontrado\n"
 					+ "Criando um Arquivo novo");
 			
 			try {
