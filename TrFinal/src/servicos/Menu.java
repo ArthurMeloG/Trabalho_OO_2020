@@ -114,7 +114,8 @@ public class Menu {
 				break;
 				
 			case 7:
-				JOptionPane.showMessageDialog(null,"A renda igualitaria calculada para " + ca.getqantAluno() + " alunos é de : " + ri.rendaIgualitaria());
+				JOptionPane.showMessageDialog(null,"A renda igualitaria calculada para os " + ca.getqantAluno() + " alunos é de : " + ri.rendaIgualitaria()+
+						"$ para cada");
 				break;
 				
 			case 8 :

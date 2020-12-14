@@ -1,6 +1,11 @@
 package calculo;
 
+import java.text.DecimalFormat;
+
+
+
 import javax.swing.JOptionPane;
+
 
 import cadastro.CadastroAluno;
 import cadastro.CadastroCategoria;
@@ -9,6 +14,8 @@ public class RendaProporcional {
 	public void calcRendaProporcional() {
 		CadastroCategoria cc = new CadastroCategoria();
 		CadastroAluno ca = new CadastroAluno();
+		DecimalFormat df = new DecimalFormat("0.00");
+		
 		
 		float valorTotal = 0;
 		float rendTotal = 0;
@@ -33,9 +40,10 @@ public class RendaProporcional {
 			temp2= valorTotal * temp;
 			temp2= temp2/100;    //valor com base na porcetagem de rendimento
 			
-			JOptionPane.showMessageDialog(null, "O aluno :" + ca.getAlunos().get(h).getNome() +
-											"\n com email :" + ca.getAlunos().get(h).getEmail() +
-											"\n Pagará " + temp2 + " Representando " + temp + " % das despesas totais");
+			JOptionPane.showMessageDialog(null, "Aluno: " + ca.getAlunos().get(h).getNome() +
+											"\n com email: " + ca.getAlunos().get(h).getEmail() +
+											"\n Pagará: " + df.format(temp2) + "$ " 
+											+ "\n Representando " + df.format(temp) + " % das despesas totais");
 			
 		}
 		
