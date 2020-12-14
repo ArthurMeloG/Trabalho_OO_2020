@@ -16,12 +16,10 @@ public class CadastroCategoria {
 	
 	public boolean cadastrarCategoria() {
 		
-		SalvarArquivo sc = new SalvarArquivo();
+		
 		Categoria temp = new Categoria();
 		
 		temp = Exception.categoriaException();
-				
-		sc.gravarCategoria(temp);
 		categorias.add(temp);
 		
 		return true;

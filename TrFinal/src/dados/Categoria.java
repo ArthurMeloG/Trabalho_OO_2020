@@ -5,12 +5,13 @@ import java.util.List;
 import javax.swing.JOptionPane;
 
 import servicos.Exception;
+import servicos.SalvarArquivo;
 
 public class Categoria {
 	
 	private String CatDescricao;
-	List<Despesas> Despesas = new ArrayList<Despesas>();
-	
+	public List<Despesas> Despesas = new ArrayList<Despesas>();
+	SalvarArquivo sc = new SalvarArquivo();
 
 	
 	//Construtor
@@ -37,18 +38,8 @@ public class Categoria {
 		Despesas temp = new Despesas();
 		temp = Exception.despesasException();
 		Despesas.add(temp);
-		return true;
-	}
-	
-	public void printLista(){
+		sc.gravarCategoria(temp, CatDescricao);
 		
-		for (int i = 0; i < Despesas.size(); i++) { // RODA O ARRAY PEGANDO OS OBJETO E PRINTANDO
-
-			JOptionPane.showMessageDialog(null,"Despesa Cadastrada\n" +
-											"valor : " + Despesas.get(i).getValorDespesa() + "\n" +
-											"descrição : " + Despesas.get(i).getDescricaoDespesa() + "\n" 
-											);
-
-		}
-	}
-}
+		return true;
+	}}
+	

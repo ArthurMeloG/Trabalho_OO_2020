@@ -9,7 +9,6 @@ import java.io.PrintWriter;
 import javax.swing.JOptionPane;
 
 import dados.Aluno;
-import dados.Categoria;
 import dados.Despesas;
 
 public class SalvarArquivo {
@@ -17,7 +16,7 @@ public class SalvarArquivo {
 	static final String nomeArquivoAluno =  "arquivos/alunos.txt";
 	static final String nomeArquivoCategoria = "arquivos/categoria.txt";
 	
-	public void gravarAluno(Aluno temp) {
+public void gravarAluno(Aluno temp) {
 		
 		String alu = "";
 		
@@ -57,10 +56,10 @@ public class SalvarArquivo {
 		
 	}
 	
-	
-	public void gravarCategoria(Categoria temp) {
+public void gravarCategoria(Despesas temp, String CatDescricao) {
 		
 		String cat = "";
+		
 		
 		//Verifica se tem arquivo
 		if(new File(nomeArquivoCategoria).isFile()) {
@@ -79,7 +78,8 @@ public class SalvarArquivo {
 		}
 		
 		//Salvando o arquivo
-		cat += temp.getDescricao() + " ;" + temp.getListasDesp() + "\n";
+		cat += CatDescricao + " ;" + temp.getDescricaoDespesa() + " ;" + temp.getValorDespesa() + "\n" ;
+		
 		
 		PrintWriter print = null;
 		
@@ -87,6 +87,9 @@ public class SalvarArquivo {
 			
 			print = new PrintWriter(new FileWriter(nomeArquivoCategoria , true));
 			print.print(cat);
+			
+			
+			
 		} catch (IOException e) {
 			JOptionPane.showMessageDialog(null, "ERRO NA TENTATIVA DE CADASTRAR CATEGORIA NO ARQUIVO", "ERRO",
 					JOptionPane.ERROR_MESSAGE);
@@ -98,3 +101,5 @@ public class SalvarArquivo {
 	}
 
 }
+
+
