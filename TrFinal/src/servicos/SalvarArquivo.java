@@ -23,6 +23,7 @@ public class SalvarArquivo {
 		//verificar se aquivo existe
 		if(new File(nomeArquivoAluno).isFile()) {
 			JOptionPane.showMessageDialog(null, "Arquivo encontrado");
+			
 		}else {
 			JOptionPane.showMessageDialog(null, "Arquivo não encontrado\n"
 					+ "Criando um Arquivo novo");

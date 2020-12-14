@@ -12,7 +12,8 @@ import servicos.SalvarArquivo;
 public class CadastroAluno {
 
 	// Criando Array de alunos
-	List<Aluno> alunos = new ArrayList<Aluno>();
+	private static List<Aluno> alunos = new ArrayList<Aluno>();
+	private static int quantAluno;
 	
 
 	public boolean cadastrarAluno() {  // ADICIONA O OBJETO ALUNO AO ARRAYLIST
@@ -23,6 +24,8 @@ public class CadastroAluno {
 		
 		sa.gravarAluno(temp); // GRAVANDO NO TXT
 		alunos.add(temp); // ADICIONA O OBJETO "TEMP" QUE JA ESTA PREENCHIDO POR CONTA DO 'alunoexcpetion'
+		
+		quantAluno = quantAluno + 1;
 
 		return true;
 	}
@@ -39,6 +42,12 @@ public class CadastroAluno {
 		}
 			
 	}
+	
+	public int getqantAluno() {
+		return quantAluno;
+	}
+	
+	
 	
 	public List<Aluno> getAlunos(){
 		return alunos;
