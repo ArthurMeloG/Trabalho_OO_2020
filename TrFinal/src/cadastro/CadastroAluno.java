@@ -48,10 +48,8 @@ public class CadastroAluno {
 	}
 	
 	
-	
 	public List<Aluno> getAlunos(){
 		return alunos;
 	}
-	
 	
 }

@@ -6,6 +6,7 @@ import javax.swing.JOptionPane;
 
 import dados.Categoria;
 import servicos.Exception;
+import servicos.SalvarArquivo;
 
 
 public class CadastroCategoria {
@@ -14,10 +15,13 @@ public class CadastroCategoria {
 	static List<Categoria> categorias = new ArrayList<Categoria>();
 	
 	public boolean cadastrarCategoria() {
+		
+		SalvarArquivo sc = new SalvarArquivo();
 		Categoria temp = new Categoria();
 		
 		temp = Exception.categoriaException();
 				
+		sc.gravarCategoria(temp);
 		categorias.add(temp);
 		
 		return true;
@@ -66,10 +70,4 @@ public class CadastroCategoria {
 	public List<Categoria> getListas (){
 		return categorias;
 	}
-	
-
-	
-	
-	
-	
 }

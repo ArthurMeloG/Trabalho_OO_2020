@@ -1,7 +1,5 @@
 package servicos;
 
-
-
 import java.io.File;
 
 import java.io.FileWriter;
@@ -11,6 +9,7 @@ import java.io.PrintWriter;
 import javax.swing.JOptionPane;
 
 import dados.Aluno;
+import dados.Categoria;
 
 public class SalvarArquivo {
 	
@@ -54,6 +53,15 @@ public class SalvarArquivo {
 			if(print != null)
 				print.close();
 		}
+		
+	}
+	
+	public void gravarCategoria(Categoria temp) {
+		
+		String cat = "";
+		
+		//Verifica se tem arquivo
+		
 		
 	}
 
