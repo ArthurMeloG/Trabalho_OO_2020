@@ -32,7 +32,6 @@ public class Menu {
 		CadastroCategoria cc = new CadastroCategoria();
 		RendaIgualitaria ri = new RendaIgualitaria();
 		RendaProporcional rp = new RendaProporcional();
-
 		
 
 		int temp1 = 0;
@@ -94,7 +93,7 @@ public class Menu {
 					}
 				
 					else{
-						JOptionPane.showMessageDialog(null, "Categoria n√£o encotrada");
+						JOptionPane.showMessageDialog(null, "Categoria n„o encotrada");
 						i=3;
 						temp3=1;
 					}
@@ -109,7 +108,7 @@ public class Menu {
 				
 			case 6 : //print despesas
 				JOptionPane.showMessageDialog(null, "Printando despesas");
-				String despesas=JOptionPane.showInputDialog("Digite a categoria em que as despesas est√£o inseridas ");
+				String despesas=JOptionPane.showInputDialog("Digite a categoria em que as despesas est„o inseridas ");
 				cc.printDesp(despesas);
 				break;
 				

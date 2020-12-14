@@ -33,8 +33,6 @@ public class Categoria {
 	}
 	
 	
-	
-	
 	public boolean cadastraDespesas() {
 		Despesas temp = new Despesas();
 		temp = Exception.despesasException();
@@ -48,12 +46,9 @@ public class Categoria {
 
 			JOptionPane.showMessageDialog(null,"Despesa Cadastrada\n" +
 											"valor : " + Despesas.get(i).getValorDespesa() + "\n" +
-											"descriÃ§Ã£o : " + Despesas.get(i).getDescricaoDespesa() + "\n" 
+											"descrição : " + Despesas.get(i).getDescricaoDespesa() + "\n" 
 											);
 
 		}
 	}
-	
-
-	
 }

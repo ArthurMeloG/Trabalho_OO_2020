@@ -12,7 +12,7 @@ public class Aluno {
 		this.setRend(rend);
 	}
 	
-	// GEt e Set
+	// Get e Set
 	public String getNome() {
 		return nome;
 	}
