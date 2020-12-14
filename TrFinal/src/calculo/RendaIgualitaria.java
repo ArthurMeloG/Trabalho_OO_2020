@@ -1,8 +1,10 @@
 package calculo;
+
 import cadastro.CadastroAluno;
 import cadastro.CadastroCategoria;
 
 public class RendaIgualitaria {
+	
 	public float rendaIgualitaria() {
 		CadastroAluno ca = new CadastroAluno();
 		CadastroCategoria cc = new CadastroCategoria();
@@ -16,11 +18,9 @@ public class RendaIgualitaria {
 			}	
 		}
 		
-		valorTotal = valorTotal / quantAluno;
-		
+		valorTotal = valorTotal / quantAluno;	
 		
 		return valorTotal;
 	
 	}
-
 }

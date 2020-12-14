@@ -16,7 +16,7 @@ public class SalvarArquivo {
 	static final String nomeArquivoAluno =  "arquivos/alunos.txt";
 	static final String nomeArquivoCategoria = "arquivos/categoria.txt";
 	
-public void gravarAluno(Aluno temp) {
+	public void gravarAluno(Aluno temp) {
 		
 		String alu = "";
 		
@@ -25,7 +25,7 @@ public void gravarAluno(Aluno temp) {
 			JOptionPane.showMessageDialog(null, "Arquivo encontrado");
 			
 		}else {
-			JOptionPane.showMessageDialog(null, "Arquivo n�o encontrado\n"
+			JOptionPane.showMessageDialog(null, "Arquivo nao encontrado\n"
 					+ "Criando um Arquivo novo");
 			
 			try {
@@ -37,7 +37,6 @@ public void gravarAluno(Aluno temp) {
 		}
 			
 		//salvando no arquivo
-		
 		alu += temp.getNome() + " ;" + temp.getEmail() + " ;" + temp.getRend() + "\n" ;
 		
 		PrintWriter print = null;
@@ -53,10 +52,10 @@ public void gravarAluno(Aluno temp) {
 			if(print != null)
 				print.close();
 		}
-		
 	}
+
 	
-public void gravarCategoria(Despesas temp, String CatDescricao) {
+	public void gravarCategoria(Despesas temp, String CatDescricao) {
 		
 		String cat = "";
 		
@@ -97,9 +96,5 @@ public void gravarCategoria(Despesas temp, String CatDescricao) {
 			if(print != null)
 				print.close();
 		}
-		
 	}
-
 }
-
-

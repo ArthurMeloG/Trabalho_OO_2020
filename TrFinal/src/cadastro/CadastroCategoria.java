@@ -7,15 +7,13 @@ import javax.swing.JOptionPane;
 import dados.Categoria;
 import servicos.Exception;
 
-
-
 public class CadastroCategoria {
 
 	//Criando array de Categorias
 	static List<Categoria> categorias = new ArrayList<Categoria>();
 	
+	
 	public boolean cadastrarCategoria() {
-		
 		
 		Categoria temp = new Categoria();
 		
@@ -24,6 +22,7 @@ public class CadastroCategoria {
 		
 		return true;
 	}
+	
 	
 	public void printListaCategoria() {
 		
@@ -34,6 +33,7 @@ public class CadastroCategoria {
 		}
 		
 	}
+	
 	
 	public boolean acharIgual(String nome) {
 		for(int j = 0; j < categorias.size();j++) {
@@ -46,6 +46,7 @@ public class CadastroCategoria {
 		return false;
 	}
 	
+	
 	public boolean verficarIgual(String nome) {
 		for(int j = 0; j < categorias.size();j++) {
 			if(nome.matches(categorias.get(j).getDescricao())==true) {
@@ -55,7 +56,7 @@ public class CadastroCategoria {
 		
 		return false;
 	}
-
+	
 	
 	public void printDesp(String nome) {
 		for(int j = 0; j < categorias.size();j++) {
@@ -64,6 +65,7 @@ public class CadastroCategoria {
 			}
 		}
 	}
+	
 	
 	public List<Categoria> getListas (){
 		return categorias;

@@ -22,7 +22,6 @@ public class LendoArquivo {
 		CadastroAluno ca = new CadastroAluno();
 		Scanner s = null;
 	
-		
 		if(new File(nomeArquivoAluno).isFile()) {
 			op = JOptionPane.showConfirmDialog(null, "Arquivo txt de Aluno encontrado.\n Deseja utilizar os dados salvos no arquivo?");
 			if(op == 0) {
@@ -62,13 +61,8 @@ public class LendoArquivo {
 				writer.close();
 				} catch (IOException e3) {
 					e3.printStackTrace();
-				}
-				
-			}
-			
+				}	
+			}	
 		}
-		
-		
-	
 	}
 }

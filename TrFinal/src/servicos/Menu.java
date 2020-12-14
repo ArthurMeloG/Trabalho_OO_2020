@@ -8,8 +8,8 @@ import calculo.RendaIgualitaria;
 import calculo.RendaProporcional;
 
 public class Menu {
-	public static int printMenu() {
-		
+	
+	public static int printMenu() {	
 	
 		String STRopc = null;
 		STRopc = (String) JOptionPane.showInputDialog(null, "Digite 1 para cadastrar um aluno \n"
@@ -35,12 +35,10 @@ public class Menu {
 		RendaIgualitaria ri = new RendaIgualitaria();
 		RendaProporcional rp = new RendaProporcional();
 		
-
 		int temp1 = 0;
 		int temp2 = 0;
 		int temp3 = 0;
 		int menu = 0;
-		
 		
 		la.lerAlunos();
 		
@@ -103,7 +101,6 @@ public class Menu {
 						temp3=1;
 					}
 					
-					
 				} while (temp3 != 1);
 				break;
 				
@@ -113,12 +110,12 @@ public class Menu {
 				
 			case 6 : //print despesas
 				JOptionPane.showMessageDialog(null, "Printando despesas");
-				String despesas=JOptionPane.showInputDialog("Digite a categoria em que as despesas est�o inseridas ");
+				String despesas=JOptionPane.showInputDialog("Digite a categoria em que as despesas estao inseridas ");
 				cc.printDesp(despesas);
 				break;
 				
 			case 7:
-				JOptionPane.showMessageDialog(null,"A renda igualitaria calculada para os " + ca.getqantAluno() + " alunos é de : " + ri.rendaIgualitaria()+
+				JOptionPane.showMessageDialog(null,"A renda igualitaria calculada para os " + ca.getqantAluno() + " alunos sao de : " + ri.rendaIgualitaria()+
 						"$ para cada");
 				break;
 				
@@ -139,7 +136,5 @@ public class Menu {
 				break;
 			}
 		} while (menu != 9); //LOOP DO MENU
-
 	}
-
 }

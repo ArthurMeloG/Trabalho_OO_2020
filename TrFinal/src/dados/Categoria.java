@@ -22,18 +22,22 @@ public class Categoria {
 	public String getDescricao() {
 		return CatDescricao;
 	}
+	
 
 	public void setDescricao(String Catdescricao) {
 		this.CatDescricao = Catdescricao;
 	}
+	
 
 	public List<Despesas> getListasDesp() {
 		return Despesas;
 	}
+	
 
 	public void setListas(List<Despesas> desps) {
 		this.Despesas = desps;
 	}
+	
 
 	public boolean cadastraDespesas() {
 		Despesas temp = new Despesas();
@@ -43,15 +47,16 @@ public class Categoria {
 
 		return true;
 	}
+	
+	
 	public void printLista(){
 		
 		for (int i = 0; i < Despesas.size(); i++) { // RODA O ARRAY PEGANDO OS OBJETO E PRINTANDO
 
 			JOptionPane.showMessageDialog(null,"Despesa Cadastrada\n" +
-											"valor : " + Despesas.get(i).getValorDespesa() + "\n" +
-											"descricao : " + Despesas.get(i).getDescricaoDespesa() + "\n" 
+											"Valor : " + Despesas.get(i).getValorDespesa() + "\n" +
+											"Descricao : " + Despesas.get(i).getDescricaoDespesa() + "\n" 
 											);
-
 		}
 	}
 }

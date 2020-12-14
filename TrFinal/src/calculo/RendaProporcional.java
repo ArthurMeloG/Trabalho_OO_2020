@@ -11,11 +11,11 @@ import cadastro.CadastroAluno;
 import cadastro.CadastroCategoria;
 
 public class RendaProporcional {
+	
 	public void calcRendaProporcional() {
 		CadastroCategoria cc = new CadastroCategoria();
 		CadastroAluno ca = new CadastroAluno();
 		DecimalFormat df = new DecimalFormat("0.00");
-		
 		
 		float valorTotal = 0;
 		float rendTotal = 0;
@@ -42,11 +42,8 @@ public class RendaProporcional {
 			
 			JOptionPane.showMessageDialog(null, "Aluno: " + ca.getAlunos().get(h).getNome() +
 											"\n com email: " + ca.getAlunos().get(h).getEmail() +
-											"\n Pagar√°: " + df.format(temp2) + "$ " 
+											"\n Pagar·: " + df.format(temp2) + "$ " 
 											+ "\n Representando " + df.format(temp) + " % das despesas totais");
-			
 		}
-		
-		
 	}
 }
