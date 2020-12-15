@@ -22,7 +22,5 @@ RendaIgualitari -> Faz os devidos cálculos para que as despesas sejam distribu�
 
 RendaProporcional -> Faz os devidos cálculos para que as depesas sejam distruibuídas entre os estudantes de forma proporcional aos seus respectivos ganhos.
 
-printImagenss ->
-Icons ->
-EasterEgg ->
+Icons -> Os ícones utilizados durante o código são encontrados nessa classe, e posteriormente utilizadas durante a execução do código.
 
