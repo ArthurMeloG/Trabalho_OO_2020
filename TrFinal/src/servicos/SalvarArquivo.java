@@ -14,7 +14,7 @@ import dados.Despesas;
 public class SalvarArquivo {
 	
 	static final String nomeArquivoAluno =  "arquivos/alunos.txt";
-	static String nomeArquivoCategoria = "arquivos/categoria.txt";
+	static String nomeArquivoCategoria;
 	
 	public void gravarAluno(Aluno temp) {
 		
@@ -60,6 +60,11 @@ public class SalvarArquivo {
 		String cat = "";
 		
 		
+		JOptionPane.showMessageDialog(null, "CADASTRANDO DESPESAS EM UM ARQUIVO TXT");
+		String mes = JOptionPane.showInputDialog("Digite o mes do ano");
+		String ano = JOptionPane.showInputDialog("Digite o ano atual");
+		nomeArquivoCategoria = "arquivos/despesas_" + mes + "_" + ano + ".txt";
+		
 		//Verifica se tem arquivo
 		if(new File(nomeArquivoCategoria).isFile()) {
 			JOptionPane.showMessageDialog(null, "Arquivo encontrado");
@@ -67,19 +72,22 @@ public class SalvarArquivo {
 		}else {
 			JOptionPane.showMessageDialog(null, "Arquivo nao encontrado\n"
 					+ "Criando um Arquivo novo");
-			
-			String mes = JOptionPane.showInputDialog("Digite o mes do ano");
-			String ano = JOptionPane.showInputDialog("Digite o ano atual");
-			
+		
 			try {
-				
 				@SuppressWarnings({ "unused", "resource" })
-				FileWriter arquivoCategoria = new FileWriter(new File("arquivos/despesas_" + mes + "_" + ano + ".txt"));
-				nomeArquivoCategoria = "arquivos/despesas_" + mes + "_" + ano + ".txt";
+				FileWriter arquivoCategoria = new FileWriter(new File(nomeArquivoCategoria));
+				
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
 		}
+		
+		
+		
+		
+		
+		
+		
 		
 		//Salvando o arquivo
 		cat += CatDescricao + " ;" + temp.getDescricaoDespesa() + " ;" + temp.getValorDespesa() + "\n" ;
@@ -102,4 +110,6 @@ public class SalvarArquivo {
 				print.close();
 		}
 	}
+	
+
 }
