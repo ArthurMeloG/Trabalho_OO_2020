@@ -8,8 +8,6 @@ public class Despesas {
 	
 	public Despesas(){};
 	
-	
-	
 	public String getDescricaoDespesa() {
 		return descricaoDespesa;
 	}
@@ -26,5 +24,4 @@ public class Despesas {
 	public void setValorDespesa(float valorDespesa) {
 		this.valorDespesa = valorDespesa;
 	}
-	
 }

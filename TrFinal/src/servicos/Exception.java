@@ -10,6 +10,7 @@ import dados.Categoria;
 import dados.Despesas;
 
 public class Exception {
+	
 	public static Aluno alunoException() {
 		Aluno al = new Aluno(null, null, null);
 
@@ -18,7 +19,6 @@ public class Exception {
 		int rendLoop = 0;
 
 		// NOME EXCEPTION
-
 		do {
 			try {
 
@@ -39,7 +39,6 @@ public class Exception {
 		} while (nomeLoop != 1); // LOOP EM CASO DE CADASTRO ERRADO
 
 		// EMAIL EXCEPTION
-
 		do {
 			try {
 
@@ -129,7 +128,7 @@ public class Exception {
 		int descricaoLoop = 2;
 		int valorDespesaLoop = 2;
 
-//DESCRIÇÃO DESPESA
+//DESCRI��O DESPESA
 		do {
 			try {
 				String descricao = (String) JOptionPane.showInputDialog(null, "Digite a descrição da despesa",
@@ -148,7 +147,7 @@ public class Exception {
 
 		} while (descricaoLoop != 1);
 
-//VALORDESPESAS
+//VALOR DESPESAS
 
 		do {
 			try {
@@ -170,5 +169,4 @@ public class Exception {
 		} while (valorDespesaLoop != 1);
 		return dp;
 	}
-
 }

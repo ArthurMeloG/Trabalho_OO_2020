@@ -1,6 +1,7 @@
 package dados;
 
 public class Aluno {
+	
 	private String nome;
 	private String email;
 	private Float rend;
@@ -12,7 +13,7 @@ public class Aluno {
 		this.setRend(rend);
 	}
 	
-	// GEt e Set
+	// Get e Set
 	public String getNome() {
 		return nome;
 	}
@@ -36,5 +37,4 @@ public class Aluno {
 	public void setRend(Float rend) {
 		this.rend = rend;
 	}
-
 }

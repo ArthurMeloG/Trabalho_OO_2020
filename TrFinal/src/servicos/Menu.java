@@ -4,9 +4,12 @@ import javax.swing.JOptionPane;
 
 import cadastro.CadastroAluno;
 import cadastro.CadastroCategoria;
+import calculo.RendaIgualitaria;
+import calculo.RendaProporcional;
 
 public class Menu {
-	public static int printMenu() {
+	
+	public static int printMenu() {	
 	
 		String STRopc = null;
 		STRopc = (String) JOptionPane.showInputDialog(null, "Digite 1 para cadastrar um aluno \n"
@@ -15,7 +18,8 @@ public class Menu {
 				+"Digite 4 para cadastra despesas \n"
 				+"Digite 5 para printar as categorias cadastradas \n"
 				+"Digite 6 para printar as despesas de uma categoria \n"
-				+"Digite 7 para ... \n"
+				+"Digite 7 para calcular a renda igualitaria \n"
+				+"Digite 8 para calcular a renda proporcional \n"
 				+"Digite 9 para sair do programa", "menu" , 0, Icons.icones(1) , null, "");
 		
 		int opc = Integer.parseInt(STRopc);
@@ -25,16 +29,18 @@ public class Menu {
 
 	public static void menu() {
 		
+		LendoArquivo la = new LendoArquivo();
 		CadastroAluno ca = new CadastroAluno();
 		CadastroCategoria cc = new CadastroCategoria();
-
+		RendaIgualitaria ri = new RendaIgualitaria();
+		RendaProporcional rp = new RendaProporcional();
 		
-		String STRtemp,STRtemp2,STRtemp3 = null;
-
 		int temp1 = 0;
 		int temp2 = 0;
 		int temp3 = 0;
 		int menu = 0;
+		
+		la.lerAlunos();
 		
 		do {
 			int i = printMenu();// UM PRINT DE MENU DENTRO DO LOOP PARA FICAR RODANDO
@@ -51,11 +57,11 @@ public class Menu {
 						JOptionPane.showMessageDialog(null, "Aluno cadastrado");
 					else
 						JOptionPane.showMessageDialog(null, "ERRO");
-
-					STRtemp = JOptionPane.showInputDialog("Deseja cadastrar outro usuario?\n 1 = sim \n 2 = não");
-					temp1 = Integer.parseInt(STRtemp);
 					
-				} while (temp1 != 2); // LOOP DO CADASTRO ALUNO PARA CADASTRAR QUANTOS OBJETOS O USUARIO QUISER
+					temp1 = JOptionPane.showConfirmDialog(null, "Deseja cadastrar outro usuario?");
+					
+					
+				} while (temp1 != 1); // LOOP DO CADASTRO ALUNO PARA CADASTRAR QUANTOS OBJETOS O USUARIO QUISER
 
 				break;
 				
@@ -71,11 +77,10 @@ public class Menu {
 						JOptionPane.showMessageDialog(null, "Categoria cadastrada");
 					else
 						JOptionPane.showMessageDialog(null, "ERRO");
-
-					STRtemp2 = JOptionPane.showInputDialog("Deseja cadastrar outra categoria?\n 1 = sim \n 2 = não");
-					temp2 = Integer.parseInt(STRtemp2);
+					temp2 = JOptionPane.showConfirmDialog(null, "Deseja cadastrar outra categoria?");
 					
-				} while (temp2 != 2);
+					
+				} while (temp2 != 1);
 				break;
 				
 				
@@ -87,18 +92,16 @@ public class Menu {
 
 					if (cc.acharIgual(StrCat) == true) {
 						JOptionPane.showMessageDialog(null, "Despesa cadastrada com sucesso");
-						STRtemp3 = JOptionPane.showInputDialog("Deseja cadastrar outra despesa?\n 1 = sim \n 2 = não");
-						temp3 = Integer.parseInt(STRtemp3);
+						temp3 = JOptionPane.showConfirmDialog(null, "Deseja cadastrar outra despesa?");
 					}
 				
 					else{
-						JOptionPane.showMessageDialog(null, "Categoria não encotrada");
+						JOptionPane.showMessageDialog(null, "Categoria nao encotrada");
 						i=3;
-						temp3=2;
+						temp3=1;
 					}
 					
-					
-				} while (temp3 != 2);
+				} while (temp3 != 1);
 				break;
 				
 			case 5 : // printa lista de cate
@@ -107,8 +110,18 @@ public class Menu {
 				
 			case 6 : //print despesas
 				JOptionPane.showMessageDialog(null, "Printando despesas");
-				String despesas=JOptionPane.showInputDialog("Digite a categoria em que as despesas estão inseridas ");
+				String despesas=JOptionPane.showInputDialog("Digite a categoria em que as despesas estao inseridas ");
 				cc.printDesp(despesas);
+				break;
+				
+			case 7:
+				JOptionPane.showMessageDialog(null,"A renda igualitaria calculada para os " + ca.getqantAluno() + " alunos sao de : " + ri.rendaIgualitaria()+
+						"$ para cada");
+				break;
+				
+			case 8 :
+				JOptionPane.showMessageDialog(null, "test");
+				rp.calcRendaProporcional();
 				break;
 				
 			case 9:
@@ -123,7 +136,5 @@ public class Menu {
 				break;
 			}
 		} while (menu != 9); //LOOP DO MENU
-
 	}
-
 }
