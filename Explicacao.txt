@@ -1,0 +1,28 @@
+CadastroAluno -> Cria um array list do tipo Aluno, adiciona os objetos Aluno no array, e grava toda a informação em um arquivo .txt. Além disso, exibe a lista de alunos cadastrados, mostrando o email, nome e rendimento de cada aluno.
+
+CadastroCategoria -> Cria um array list do tipo Categoria, adiciona os objetos Categoria no array, exibe a lista de categoria cadastradas, faz a verificação se a categoria já não foi cadastrada, e exibe as despesas de cada categoria.
+
+Aluno -> Recebe os 3 parâmetros para a construção de um objeto do tipo Aluno, são eles: (1) email; (2) nome e (3) renda do estudante.
+
+Categoria -> Recebe 2 parâmetros importantes para o cadastro de uma Categoria, são eles: (1) Descrição da categoria e (2) Um array list com as Despesas cadastradas. Além disso, cadastra as despesas, grava elas em um arquivo .txt e exibe a lista de despesas, com sua respectiva descrição e valor.
+
+Despesas -> Recebe 2 parâmetros importantes para o cadastro de uma Despesa, são eles: (1) descrição da despesa e (2) o valor da despesa.
+
+Principal -> Chama a classe Menu.
+
+Exception -> Lida e trata todas as exceções do projeto, incluindo a exceção de Aluno, de Categoria, e de Despesa.
+
+LendoArquivo -> Procura por arquivos txt no programa que possam conter informações importantes, como alunos ou categorias já cadastrados. Então a classe seleciona se o usuário deseja considerar estes dados dos arquivos no decorrer da execução do programa ou não.
+
+Menu -> Exibe e recebe todas as informações dos Menus do programa. 
+
+SalvarArquivo -> Salva os dados dos alunos cadastrados e das categorias cadastradas em arquivos .txt. O arquivo alunos.txt armazena os dados de alunos, e o categoria.txt armazena os dados das categorias
+
+RendaIgualitari -> Faz os devidos cálculos para que as despesas sejam distribuídas entre os estudantes de forma igualitária.
+
+RendaProporcional -> Faz os devidos cálculos para que as depesas sejam distruibuídas entre os estudantes de forma proporcional aos seus respectivos ganhos.
+
+printImagenss ->
+Icons ->
+EasterEgg ->
+
