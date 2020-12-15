@@ -14,7 +14,7 @@ import dados.Despesas;
 public class SalvarArquivo {
 	
 	static final String nomeArquivoAluno =  "arquivos/alunos.txt";
-	static final String nomeArquivoCategoria = "arquivos/categoria.txt";
+	static String nomeArquivoCategoria = "arquivos/categoria.txt";
 	
 	public void gravarAluno(Aluno temp) {
 		
@@ -68,9 +68,14 @@ public class SalvarArquivo {
 			JOptionPane.showMessageDialog(null, "Arquivo nao encontrado\n"
 					+ "Criando um Arquivo novo");
 			
+			String mes = JOptionPane.showInputDialog("Digite o mes do ano");
+			String ano = JOptionPane.showInputDialog("Digite o ano atual");
+			
 			try {
+				
 				@SuppressWarnings({ "unused", "resource" })
-				FileWriter arquivoCategoria = new FileWriter(new File("arquivos/categoria.txt"));
+				FileWriter arquivoCategoria = new FileWriter(new File("arquivos/despesas_" + mes + "_" + ano + ".txt"));
+				nomeArquivoCategoria = "arquivos/despesas_" + mes + "_" + ano + ".txt";
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
